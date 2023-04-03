@@ -3,7 +3,6 @@ from bs4 import BeautifulSoup
 import random
 from summarizer import summarize_review
 
-base_url = "https://uk.trustpilot.com/review/katkin.com?page={}"
 
 def scrape_reviews(base_url, num_pages, star_rating, summary_prompt=None):
     all_reviews = []

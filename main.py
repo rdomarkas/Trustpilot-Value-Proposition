@@ -1,6 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
 
+app.run(host='0.0.0.0', port=3000)
+
 base_url = "https://uk.trustpilot.com/review/katkin.com?page={}"
 
 num_pages = 1  # change this to the number of pages to scrape

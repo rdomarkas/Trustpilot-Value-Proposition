@@ -1,5 +1,6 @@
 window.onload = () => {
   const reviews = JSON.parse(localStorage.getItem("reviews"));
+  const summary = reviews.length ? reviews[0].summary : "";
 
   const results = reviews.map(
     (review) =>
@@ -10,10 +11,6 @@ window.onload = () => {
       </li>`
   );
 
-  const summaries = reviews.map(
-    (review) => `<li class="list-group-item">${review.summary}</li>`
-  );
-
   document.getElementById("results").innerHTML = `<ul class="list-group">${results.join("")}</ul>`;
-  document.getElementById("summaries").innerHTML = `<ul class="list-group">${summaries.join("")}</ul>`;
+  document.getElementById("summaries").innerHTML = `<div class="card my-4"><div class="card-body">${summary}</div></div>`;
 };
